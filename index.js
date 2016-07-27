@@ -9,14 +9,10 @@ app.use(express.static(__dirname + '/public'))
 
 
 app.get('/', function(request, resp) {
-    resp.writeHead(200, {
-        "Content-Type": "text/html"
-    });
-    fs.readFileSync(filename, "utf8", function(err, data) {
-        if (err) throw err;
-        resp.send(data);
-        resp.end();
-    });
+    var text = fs.readFileSync(filename, "utf8", function(err, data)) 
+        resp.send(text);
+    
+});
 
 
 app.listen(app.get('port'), function() {
