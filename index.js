@@ -14,7 +14,7 @@ app.get('/', function(request, resp) {
     });
     fs.readFileSync(filename, "utf8", function(err, data) {
         if (err) throw err;
-        resp.write(data);
+        resp.send(data);
         resp.end();
     });
 
