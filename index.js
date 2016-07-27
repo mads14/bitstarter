@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var fs = require('fs')
-var filename = "./index.html"
+var filename = "index.html"
 
 
 app.set('port', (process.env.PORT || 5000))
